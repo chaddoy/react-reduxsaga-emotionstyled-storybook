@@ -1,14 +1,12 @@
-import { useState } from 'react';
 import reactLogo from '@/assets/react.svg';
 import emotionLogo from '@/assets/emotion.svg';
 import storybookLogo from '@/assets/storybook.svg';
 import viteLogo from '/vite.svg';
 import '@/App.css';
 import Button from '@/components/Button';
+import { NavLink } from 'react-router';
 
 export default function HomePage() {
-  const [count, setCount] = useState(0);
-
   return (
     <div>
       <div>
@@ -31,9 +29,9 @@ export default function HomePage() {
       </div>
       <h1>Vite + React + Emotion/Styled + Storybook</h1>
       <div className="card">
-        <Button primary onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </Button>
+        <NavLink to="/blog-post">
+          <Button primary>Blog Post</Button>
+        </NavLink>
       </div>
     </div>
   );
