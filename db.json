@@ -59,10 +59,16 @@
       "order": 1
     },
     {
+      "id": 6,
+      "boardId": 2,
+      "name": "In Progress",
+      "order": 2
+    },
+    {
       "id": 5,
       "boardId": 2,
       "name": "Done",
-      "order": 2
+      "order": 3
     }
   ],
   "tasks": [
@@ -118,6 +124,51 @@
       "description": "Go for a 30-minute run",
       "assigneeId": 2,
       "dueDate": "2025-05-01",
+      "status": "completed"
+    },
+    {
+      "id": 7,
+      "columnId": 4,
+      "title": "Read a book",
+      "description": "Finish reading 'Atomic Habits'",
+      "assigneeId": 2,
+      "dueDate": "2025-05-10",
+      "status": "open"
+    },
+    {
+      "id": 8,
+      "columnId": 4,
+      "title": "Plan a trip",
+      "description": "Research destinations and create a travel itinerary",
+      "assigneeId": 2,
+      "dueDate": "2025-05-15",
+      "status": "open"
+    },
+    {
+      "id": 9,
+      "columnId": 6,
+      "title": "Organize workspace",
+      "description": "Clean and declutter desk and surroundings",
+      "assigneeId": 2,
+      "dueDate": "2025-05-05",
+      "status": "in-progress"
+    },
+    {
+      "id": 10,
+      "columnId": 6,
+      "title": "Meditate",
+      "description": "Do a 10-minute guided meditation session",
+      "assigneeId": 2,
+      "dueDate": "2025-05-04",
+      "status": "in-progress"
+    },
+    {
+      "id": 11,
+      "columnId": 5,
+      "title": "Complete tax filing",
+      "description": "Submit tax documents and confirm filing online",
+      "assigneeId": 2,
+      "dueDate": "2025-04-30",
       "status": "completed"
     }
   ]
