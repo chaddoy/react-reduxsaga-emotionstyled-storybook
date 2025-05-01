@@ -11,28 +11,30 @@ export default function HomePage() {
     <S.Wrapper>
       <div>
         <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
+          <S.Img src={viteLogo} alt="Vite logo" />
         </a>
         <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+          <S.Img src={reactLogo} className="react" alt="React logo" />
         </a>
         <a href="https://emotion.sh" target="_blank">
-          <img src={emotionLogo} className="logo emotion" alt="Emotion logo" />
+          <S.Img src={emotionLogo} className="emotion" alt="Emotion logo" />
         </a>
         <a href="https://storybook.js.org/" target="_blank">
-          <img
+          <S.Img
             src={storybookLogo}
-            className="logo storyook"
-            alt="Storyook logo"
+            className="storybook"
+            alt="Storybook logo"
           />
         </a>
       </div>
+
       <h1>Vite + React + Emotion/Styled + Storybook</h1>
-      <div className="card">
+
+      <S.Card>
         <NavLink to="/blog-post">
           <Button>Blog Post</Button>
         </NavLink>
-      </div>
+      </S.Card>
     </S.Wrapper>
   );
 }

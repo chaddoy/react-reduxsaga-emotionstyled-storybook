@@ -9,7 +9,7 @@ export const getBackgroundColor = (
     case 'primary':
       return css`
         background-color: ${theme.colors.primary};
-        color: ${theme.colors.text00};
+        color: ${theme.colors.text03};
 
         &:hover {
           background-color: ${theme.colors.primaryInteract};
@@ -19,7 +19,7 @@ export const getBackgroundColor = (
     case 'secondary':
       return css`
         background-color: ${theme.colors.secondary};
-        color: ${theme.colors.text03};
+        color: ${theme.colors.text01};
 
         &:hover {
           background-color: ${theme.colors.secondaryInteract};

@@ -10,10 +10,10 @@ export const darkTheme = {
     secondaryInteract: palette.zinc[900],
 
     // Text colors
-    text00: palette.charcoal,
-    text01: palette.zinc[600],
-    text02: palette.zinc[400],
-    text03: palette.white,
+    text00: palette.white,
+    text01: palette.zinc[400],
+    text02: palette.zinc[600],
+    text03: palette.charcoal,
   },
   background: palette.charcoal,
 };
