@@ -3,11 +3,12 @@ import Home from './pages/Home';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import BlogPost from './pages/BlogPost';
 import GlobalStyle from './components/GlobalStyles';
-import { lightTheme } from './styles/themes';
+import { useTheme } from './contexts/theme';
 
 function App() {
+  const { theme } = useTheme();
   return (
-    <ThemeProvider theme={lightTheme}>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
       <BrowserRouter>
         <Routes>

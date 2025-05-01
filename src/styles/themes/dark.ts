@@ -15,5 +15,5 @@ export const darkTheme = {
     text02: palette.zinc[400],
     text03: palette.white,
   },
-  background: '#09090B',
+  background: palette.charcoal,
 };
