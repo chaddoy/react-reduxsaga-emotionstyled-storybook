@@ -1,15 +1,17 @@
 import { ThemeProvider } from '@emotion/react';
-import { theme } from './styles/theme';
-import HomePage from './pages/HomePage';
+import Home from './pages/Home';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import BlogPost from './pages/BlogPost';
+import GlobalStyle from './components/GlobalStyles';
+import { lightTheme } from './styles/themes';
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={lightTheme}>
+      <GlobalStyle />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<Home />} />
           <Route path="/blog-post" element={<BlogPost />} />
         </Routes>
       </BrowserRouter>

@@ -2,13 +2,13 @@ import reactLogo from '@/assets/react.svg';
 import emotionLogo from '@/assets/emotion.svg';
 import storybookLogo from '@/assets/storybook.svg';
 import viteLogo from '/vite.svg';
-import '@/App.css';
 import Button from '@/components/Button';
 import { NavLink } from 'react-router';
+import * as S from './style';
 
 export default function HomePage() {
   return (
-    <div>
+    <S.Wrapper>
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -30,9 +30,9 @@ export default function HomePage() {
       <h1>Vite + React + Emotion/Styled + Storybook</h1>
       <div className="card">
         <NavLink to="/blog-post">
-          <Button primary>Blog Post</Button>
+          <Button>Blog Post</Button>
         </NavLink>
       </div>
-    </div>
+    </S.Wrapper>
   );
 }

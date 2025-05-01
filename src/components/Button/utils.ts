@@ -1,20 +1,51 @@
-import {Theme, ThemeSize} from "@/styles/theme";
+import { css, Theme } from '@emotion/react';
+import { ButtonType, Size } from './interface';
 
-export const getBackgroundColor = (theme: Theme, variant?: string) => {
+export const getBackgroundColor = (
+  theme: Theme,
+  variant: ButtonType = 'primary',
+) => {
   switch (variant) {
     case 'primary':
-      return theme.colors.primary;
+      return css`
+        background-color: ${theme.colors.primary};
+        color: ${theme.colors.text00};
+
+        &:hover {
+          background-color: ${theme.colors.primaryInteract};
+        }
+      `;
+
     case 'secondary':
-      return theme.colors.secondary;
-    default:
-      return 'transparent';
+      return css`
+        background-color: ${theme.colors.secondary};
+        color: ${theme.colors.text03};
+
+        &:hover {
+          background-color: ${theme.colors.secondaryInteract};
+        }
+      `;
   }
 };
 
-export const getTextColor = (theme: Theme, variant?: string) => {
-  return variant ? theme.colors.white : theme.colors.text;
-};
+export const getSize = (theme: Theme, size: Size = 'medium') => {
+  switch (size) {
+    case 'small':
+      return css`
+        padding: 10px 16px;
+        font-size: ${theme.fontSize.xs};
+      `;
 
-export const getSizeStyles = (theme: Theme, size?: ThemeSize) => {
-  return size ? theme.sizes[size] : theme.sizes.medium;
+    case 'medium':
+      return css`
+        padding: 11px 20px;
+        font-size: ${theme.fontSize.sm};
+      `;
+
+    case 'large':
+      return css`
+        padding: 12px 24px;
+        font-size: ${theme.fontSize.base};
+      `;
+  }
 };
