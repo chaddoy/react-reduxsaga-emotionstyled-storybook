@@ -1,13 +1,13 @@
-import { lightTheme, Theme } from '@/styles/themes';
 import { createContext } from 'react';
 
+export type Theme = 'light' | 'dark';
 interface ThemeContextProps {
   theme: Theme;
   toggleTheme: () => void;
 }
 
-export const ThemeContext = createContext<ThemeContextProps | undefined>({
-  theme: lightTheme,
+export const ThemeContext = createContext<ThemeContextProps>({
+  theme: 'light',
   toggleTheme: () => {
     console.warn('toggleTheme function is not defined');
   },

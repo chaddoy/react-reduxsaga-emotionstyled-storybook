@@ -1,8 +1,11 @@
 import styled from '@emotion/styled';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div``;
+
+export const Content = styled.div`
   margin: 0 auto;
   text-align: center;
+  align-items: center;
   place-content: center;
   width: 100vw;
   height: 100vh;

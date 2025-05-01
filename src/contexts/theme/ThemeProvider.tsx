@@ -1,20 +1,21 @@
-import { darkTheme, lightTheme } from '@/styles/themes';
-import { ReactNode, useEffect, useMemo, useState } from 'react';
-import { ThemeContext } from './ThemeContext';
+import { ReactNode, useEffect, useState } from 'react';
+import { Theme, ThemeContext } from './ThemeContext';
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [darkMode, setIsDarkMode] = useState(false);
-  const theme = useMemo(() => (darkMode ? darkTheme : lightTheme), [darkMode]);
+  const [theme, setTheme] = useState<Theme>('light');
 
   useEffect(() => {
-    if (localStorage.getItem('theme') === 'dark') {
-      setIsDarkMode(true);
-    }
+    const localTheme = (localStorage.getItem('theme') || 'light') as Theme;
+
+    setTheme(localTheme);
   }, []);
 
   const toggleTheme = () => {
-    setIsDarkMode((prev) => !prev);
-    localStorage.setItem('theme', darkMode ? 'light' : 'dark');
+    setTheme((prev) => {
+      const newTheme = prev === 'light' ? 'dark' : 'light';
+      localStorage.setItem('theme', newTheme);
+      return newTheme;
+    });
   };
 
   return (

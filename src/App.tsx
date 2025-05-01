@@ -4,11 +4,12 @@ import { BrowserRouter, Route, Routes } from 'react-router';
 import BlogPost from './pages/BlogPost';
 import GlobalStyle from './components/GlobalStyles';
 import { useTheme } from './contexts/theme';
+import { darkTheme, lightTheme } from './styles/themes';
 
 function App() {
   const { theme } = useTheme();
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <GlobalStyle />
       <BrowserRouter>
         <Routes>
