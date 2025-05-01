@@ -35,8 +35,8 @@ export default function HomePage() {
         <h1>Vite + React + Emotion/Styled + Storybook</h1>
 
         <Card>
-          <NavLink to="/blog-post">
-            <Button>Blog Post</Button>
+          <NavLink to="/kanban">
+            <Button>Kanban</Button>
           </NavLink>
         </Card>
       </Content>
