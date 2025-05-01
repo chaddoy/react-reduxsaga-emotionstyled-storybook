@@ -17,45 +17,67 @@
       "name": "Alice Brown",
       "email": "alice.brown@example.com",
       "avatar": "https://i.pravatar.cc/100?u=alice"
+    },
+    {
+      "id": 4,
+      "name": "Bob Johnson",
+      "email": "bob.johnson@example.com",
+      "avatar": "https://i.pravatar.cc/100?u=bob"
+    },
+    {
+      "id": 5,
+      "name": "Emily Davis",
+      "email": "emily.davis@example.com",
+      "avatar": "https://i.pravatar.cc/100?u=emily"
     }
   ],
   "boards": [
     {
       "id": 1,
-      "name": "Team Project",
-      "description": "Kanban board for the team project",
-      "userId": 1
+      "name": "Development Team Board",
+      "description": "Kanban board for the development team",
+      "type": "kanban",
+      "userId": 1,
+      "abbreviation": "DEV"
     },
     {
       "id": 2,
-      "name": "Personal Tasks",
-      "description": "Personal Kanban board",
-      "userId": 2
+      "name": "Marketing Team Board",
+      "description": "Kanban board for the marketing team",
+      "type": "kanban",
+      "userId": 2,
+      "abbreviation": "MKT"
     }
   ],
   "columns": [
     {
       "id": 1,
       "boardId": 1,
-      "name": "To Do",
+      "name": "Backlog",
       "order": 1
     },
     {
       "id": 2,
       "boardId": 1,
-      "name": "In Progress",
+      "name": "Selected for Development",
       "order": 2
     },
     {
       "id": 3,
       "boardId": 1,
-      "name": "Done",
+      "name": "In Progress",
       "order": 3
     },
     {
       "id": 4,
+      "boardId": 1,
+      "name": "Done",
+      "order": 4
+    },
+    {
+      "id": 5,
       "boardId": 2,
-      "name": "To Do",
+      "name": "Backlog",
       "order": 1
     },
     {
@@ -65,111 +87,170 @@
       "order": 2
     },
     {
-      "id": 5,
+      "id": 7,
       "boardId": 2,
-      "name": "Done",
+      "name": "Review",
       "order": 3
+    },
+    {
+      "id": 8,
+      "boardId": 2,
+      "name": "Completed",
+      "order": 4
     }
   ],
   "tasks": [
     {
       "id": 1,
+      "ticketNumber": "DEV-1",
       "columnId": 1,
-      "title": "Set up project",
-      "description": "Initialize the repository and set up the environment",
+      "title": "Set up project repository",
+      "description": "Create the repository and initialize with README",
       "assigneeId": 1,
       "dueDate": "2025-05-05",
-      "status": "open"
+      "status": "open",
+      "priority": "Medium",
+      "epicId": 1,
+      "labels": ["setup", "repository"]
     },
     {
       "id": 2,
-      "columnId": 1,
-      "title": "Write documentation",
-      "description": "Draft the initial project documentation",
+      "ticketNumber": "DEV-2",
+      "columnId": 2,
+      "title": "Design database schema",
+      "description": "Draft the initial database schema for the application",
       "assigneeId": 2,
-      "dueDate": "2025-05-07",
-      "status": "open"
+      "dueDate": "2025-05-10",
+      "status": "open",
+      "priority": "High",
+      "epicId": 1,
+      "labels": ["database", "design"]
     },
     {
       "id": 3,
-      "columnId": 2,
-      "title": "Develop login feature",
-      "description": "Implement the login functionality for the app",
+      "ticketNumber": "DEV-3",
+      "columnId": 3,
+      "title": "Develop login functionality",
+      "description": "Implement the login feature using OAuth",
       "assigneeId": 3,
-      "dueDate": "2025-05-08",
-      "status": "in-progress"
+      "dueDate": "2025-05-15",
+      "status": "in-progress",
+      "priority": "High",
+      "epicId": 2,
+      "labels": ["authentication", "frontend", "backend"]
     },
     {
       "id": 4,
-      "columnId": 3,
-      "title": "Finalize project plan",
-      "description": "Complete the project plan and share with the team",
+      "ticketNumber": "DEV-4",
+      "columnId": 4,
+      "title": "Finalize sprint planning",
+      "description": "Complete the sprint planning session and finalize tasks",
       "assigneeId": 1,
-      "dueDate": "2025-04-30",
-      "status": "completed"
+      "dueDate": "2025-05-01",
+      "status": "completed",
+      "priority": "Low",
+      "epicId": 3,
+      "labels": ["planning", "team"]
     },
     {
       "id": 5,
-      "columnId": 4,
-      "title": "Buy groceries",
-      "description": "Get milk, eggs, and bread",
+      "ticketNumber": "MKT-1",
+      "columnId": 5,
+      "title": "Create social media strategy",
+      "description": "Draft a strategy for social media campaigns",
       "assigneeId": 2,
-      "dueDate": "2025-05-02",
-      "status": "open"
+      "dueDate": "2025-05-07",
+      "status": "open",
+      "priority": "High",
+      "epicId": 4,
+      "labels": ["marketing", "social media"]
     },
     {
       "id": 6,
-      "columnId": 5,
-      "title": "Exercise",
-      "description": "Go for a 30-minute run",
-      "assigneeId": 2,
-      "dueDate": "2025-05-01",
-      "status": "completed"
+      "ticketNumber": "MKT-2",
+      "columnId": 6,
+      "title": "Design campaign graphics",
+      "description": "Create graphics for the upcoming ad campaign",
+      "assigneeId": 4,
+      "dueDate": "2025-05-12",
+      "status": "in-progress",
+      "priority": "Medium",
+      "epicId": 4,
+      "labels": ["design", "campaign"]
     },
     {
       "id": 7,
-      "columnId": 4,
-      "title": "Read a book",
-      "description": "Finish reading 'Atomic Habits'",
-      "assigneeId": 2,
-      "dueDate": "2025-05-10",
-      "status": "open"
+      "ticketNumber": "MKT-3",
+      "columnId": 7,
+      "title": "Review blog drafts",
+      "description": "Review the drafts for the next blog series",
+      "assigneeId": 5,
+      "dueDate": "2025-05-08",
+      "status": "in-review",
+      "priority": "Medium",
+      "epicId": 5,
+      "labels": ["content", "review"]
     },
     {
       "id": 8,
-      "columnId": 4,
-      "title": "Plan a trip",
-      "description": "Research destinations and create a travel itinerary",
+      "ticketNumber": "MKT-4",
+      "columnId": 8,
+      "title": "Launch email campaign",
+      "description": "Send out the email campaign for the new product",
       "assigneeId": 2,
-      "dueDate": "2025-05-15",
-      "status": "open"
+      "dueDate": "2025-05-01",
+      "status": "completed",
+      "priority": "High",
+      "epicId": 4,
+      "labels": ["email", "campaign"]
+    }
+  ],
+  "epics": [
+    {
+      "id": 1,
+      "name": "Project Initialization",
+      "description": "Tasks related to setting up the project",
+      "boardId": 1
     },
     {
-      "id": 9,
-      "columnId": 6,
-      "title": "Organize workspace",
-      "description": "Clean and declutter desk and surroundings",
-      "assigneeId": 2,
-      "dueDate": "2025-05-05",
-      "status": "in-progress"
+      "id": 2,
+      "name": "User Authentication",
+      "description": "Tasks related to implementing user login and authentication",
+      "boardId": 1
     },
     {
-      "id": 10,
-      "columnId": 6,
-      "title": "Meditate",
-      "description": "Do a 10-minute guided meditation session",
-      "assigneeId": 2,
-      "dueDate": "2025-05-04",
-      "status": "in-progress"
+      "id": 3,
+      "name": "Sprint Planning",
+      "description": "Tasks related to planning the sprint activities",
+      "boardId": 1
     },
     {
-      "id": 11,
-      "columnId": 5,
-      "title": "Complete tax filing",
-      "description": "Submit tax documents and confirm filing online",
-      "assigneeId": 2,
-      "dueDate": "2025-04-30",
-      "status": "completed"
+      "id": 4,
+      "name": "Marketing Campaigns",
+      "description": "Tasks related to marketing campaigns and strategies",
+      "boardId": 2
+    },
+    {
+      "id": 5,
+      "name": "Content Creation",
+      "description": "Tasks related to writing and approving content",
+      "boardId": 2
+    }
+  ],
+  "sprints": [
+    {
+      "id": 1,
+      "name": "Sprint 1",
+      "startDate": "2025-05-01",
+      "endDate": "2025-05-15",
+      "boardId": 1
+    },
+    {
+      "id": 2,
+      "name": "Marketing Sprint 1",
+      "startDate": "2025-05-01",
+      "endDate": "2025-05-15",
+      "boardId": 2
     }
   ]
 }
