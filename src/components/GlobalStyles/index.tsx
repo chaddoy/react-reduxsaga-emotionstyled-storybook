@@ -8,8 +8,8 @@ export default function GlobalStyles() {
         css`
           :root {
             font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-            background-color: ${theme.background};
-            color: ${theme.colors.text00};
+            background-color: ${theme.colors.background};
+            color: ${theme.colors.foreground};
           }
 
           body {

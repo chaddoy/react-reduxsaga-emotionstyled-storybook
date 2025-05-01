@@ -4,13 +4,15 @@ import storybookLogo from '@/assets/storybook.svg';
 import viteLogo from '/vite.svg';
 import Button from '@/components/Button';
 import { NavLink } from 'react-router';
-import { Card, Content, Img, Wrapper } from './style';
+import { Card, Content, Img, ThemeButtonWrapper, Wrapper } from './style';
 import ThemeButton from '@/components/ThemeButton';
 
 export default function HomePage() {
   return (
     <Wrapper>
-      <ThemeButton />
+      <ThemeButtonWrapper>
+        <ThemeButton />
+      </ThemeButtonWrapper>
 
       <Content>
         <div>

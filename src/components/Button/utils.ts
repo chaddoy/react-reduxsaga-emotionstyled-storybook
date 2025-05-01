@@ -19,10 +19,20 @@ export const getBackgroundColor = (
     case 'secondary':
       return css`
         background-color: ${theme.colors.secondary};
-        color: ${theme.colors.text01};
+        color: ${theme.colors.text00};
 
         &:hover {
           background-color: ${theme.colors.secondaryInteract};
+        }
+      `;
+
+    case 'ghost':
+      return css`
+        background-color: transparent;
+        color: ${theme.colors.text01};
+
+        &:hover {
+          background-color: ${theme.colors.secondary};
         }
       `;
   }

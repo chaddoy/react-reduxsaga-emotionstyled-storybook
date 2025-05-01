@@ -1,3 +1,5 @@
+import KanbanLayout from '@/layouts/Kanban';
+
 export default function Kanban() {
-  return <div>Kanban</div>;
+  return <KanbanLayout>Kanban</KanbanLayout>;
 }

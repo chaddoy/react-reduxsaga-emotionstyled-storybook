@@ -2,6 +2,12 @@ import styled from '@emotion/styled';
 
 export const Wrapper = styled.div``;
 
+export const ThemeButtonWrapper = styled.div`
+  position: fixed;
+  right: 0;
+  padding: 10px;
+`;
+
 export const Content = styled.div`
   margin: 0 auto;
   text-align: center;
