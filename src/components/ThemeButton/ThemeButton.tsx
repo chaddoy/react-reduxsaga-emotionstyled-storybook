@@ -8,7 +8,7 @@ export default function ThemeButton() {
   return (
     <Wrapper>
       <Button onClick={() => toggleTheme()}>
-        {theme === 'light' ? <HiSun /> : <HiMoon />}
+        {theme === 'base' ? <HiSun /> : <HiMoon />}
       </Button>
     </Wrapper>
   );

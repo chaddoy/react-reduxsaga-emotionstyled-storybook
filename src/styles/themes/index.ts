@@ -1,5 +1,5 @@
-import { lightTheme } from './light';
+import { baseTheme } from './base';
 import { darkTheme } from './dark';
 
-export { lightTheme, darkTheme };
-export type Theme = typeof lightTheme;
+export { baseTheme, darkTheme };
+export type Theme = typeof baseTheme;

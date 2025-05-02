@@ -4,12 +4,12 @@ import { BrowserRouter, Route, Routes } from 'react-router';
 import Kanban from './pages/Kanban';
 import GlobalStyle from './components/GlobalStyles';
 import { useTheme } from './contexts/theme';
-import { darkTheme, lightTheme } from './styles/themes';
+import { baseTheme, darkTheme } from './styles/themes';
 
 function App() {
   const { theme } = useTheme();
   return (
-    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+    <ThemeProvider theme={theme === 'base' ? baseTheme : darkTheme}>
       <GlobalStyle />
       <BrowserRouter>
         <Routes>

@@ -8,9 +8,9 @@ export const StyledButton = styled.button<ButtonProps>`
     display: inline-block;
     cursor: pointer;
     border: 0;
-    border-radius: ${theme.radius.sm};
+    border-radius: ${theme.borders.radius.sm};
     line-height: 1;
-    font-weight: ${theme.fontWeight.medium};
+    font-weight: ${theme.typography.fontWeight.medium};
     ${getBackgroundColor(theme, buttonType)}
     transition-property: color,background-color,border-color,text-decoration-color,fill,stroke;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

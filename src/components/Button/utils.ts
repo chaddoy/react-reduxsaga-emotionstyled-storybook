@@ -8,31 +8,31 @@ export const getBackgroundColor = (
   switch (variant) {
     case 'primary':
       return css`
-        background-color: ${theme.colors.primary};
-        color: ${theme.colors.text03};
+        background-color: ${theme.colors.brand.primary.DEFAULT};
+        color: ${theme.colors.text.brand.primary.DEFAULT};
 
         &:hover {
-          background-color: ${theme.colors.primaryInteract};
+          background-color: ${theme.colors.brand.primary.hover};
         }
       `;
 
     case 'secondary':
       return css`
-        background-color: ${theme.colors.secondary};
-        color: ${theme.colors.text00};
+        background-color: ${theme.colors.brand.secondary.DEFAULT};
+        color: ${theme.colors.text.brand.secondary.DEFAULT};
 
         &:hover {
-          background-color: ${theme.colors.secondaryInteract};
+          background-color: ${theme.colors.brand.secondary.hover};
         }
       `;
 
     case 'ghost':
       return css`
         background-color: transparent;
-        color: ${theme.colors.text01};
+        color: ${theme.colors.text.brand.primary.DEFAULT};
 
         &:hover {
-          background-color: ${theme.colors.secondary};
+          background-color: ${theme.colors.secondary.hover};
         }
       `;
   }
@@ -43,19 +43,19 @@ export const getSize = (theme: Theme, size: Size = 'medium') => {
     case 'small':
       return css`
         padding: 10px 16px;
-        font-size: ${theme.fontSize.xs};
+        font-size: ${theme.typography.fontSize.xs};
       `;
 
     case 'medium':
       return css`
         padding: 11px 20px;
-        font-size: ${theme.fontSize.sm};
+        font-size: ${theme.typography.fontSize.sm};
       `;
 
     case 'large':
       return css`
         padding: 12px 24px;
-        font-size: ${theme.fontSize.base};
+        font-size: ${theme.typography.fontSize.base};
       `;
   }
 };

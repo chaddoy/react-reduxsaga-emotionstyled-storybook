@@ -14,8 +14,8 @@ export const HeaderWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 8px 14px;
-    background-color: ${theme.colors.secondary};
-    box-shadow: ${theme.shadows.elevation[2]};
+    background-color: ${theme.colors.secondary.DEFAULT};
+    box-shadow: ${theme.colors.shadow.md};
     position: relative;
     z-index: 1;
   `}
@@ -31,14 +31,14 @@ export const LeftSidebarWrapper = styled.div`
     min-width: 240px;
     flex-shrink: 1;
     padding: 10px;
-    background-color: ${theme.colors.secondary};
+    background-color: ${theme.colors.secondary.DEFAULT};
   `}
 `;
 
 export const Content = styled.div`
   ${({ theme }) => `
-    background-color: ${theme.colors.secondary};
-    border-left: 2px solid ${theme.colors.tertiary};
+    background-color: ${theme.colors.secondary.DEFAULT};
+    border-left: 2px solid ${theme.colors.secondary.hover};
     flex-grow: 1;
   `}
 `;
